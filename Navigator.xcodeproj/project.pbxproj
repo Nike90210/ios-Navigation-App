@@ -12,9 +12,12 @@
 		AA272A25292F8F71009439D5 /* Navigator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA272A23292F8F71009439D5 /* Navigator.xcdatamodeld */; };
 		AA272A27292F8F73009439D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA272A26292F8F73009439D5 /* Assets.xcassets */; };
 		AA272A2A292F8F73009439D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */; };
+		AA4EF69E293B55C800FCC37E /* Dragon Expansion.png in Resources */ = {isa = PBXBuildFile; fileRef = AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */; };
 		AA821BF3293386A30033ED03 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF2293386A30033ED03 /* PostController.swift */; };
 		AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF429338B780033ED03 /* FeedViewController.swift */; };
 		AA821BF929338D020033ED03 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF829338D020033ED03 /* ProViewController.swift */; };
+		AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */; };
+		AA882A8B29389E4A009FAC93 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */; };
 		AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4A9132936036700AA7AB1 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +29,12 @@
 		AA272A26292F8F73009439D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA272A29292F8F73009439D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA272A2B292F8F73009439D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon Expansion.png"; sourceTree = "<group>"; };
 		AA821BF2293386A30033ED03 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		AA821BF429338B780033ED03 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AA821BF829338D020033ED03 /* ProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
+		AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		AAC4A9132936036700AA7AB1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,12 +74,23 @@
 				AA821BF2293386A30033ED03 /* PostController.swift */,
 				AAC4A9132936036700AA7AB1 /* InfoViewController.swift */,
 				AA821BF829338D020033ED03 /* ProViewController.swift */,
+				AA882A8329389BB2009FAC93 /* Profile */,
 				AA272A26292F8F73009439D5 /* Assets.xcassets */,
+				AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */,
 				AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */,
 				AA272A2B292F8F73009439D5 /* Info.plist */,
 				AA272A23292F8F71009439D5 /* Navigator.xcdatamodeld */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		AA882A8329389BB2009FAC93 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
+				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4EF69E293B55C800FCC37E /* Dragon Expansion.png in Resources */,
 				AA272A2A292F8F73009439D5 /* LaunchScreen.storyboard in Resources */,
 				AA272A27292F8F73009439D5 /* Assets.xcassets in Resources */,
 			);
@@ -149,10 +167,12 @@
 				AA272A25292F8F71009439D5 /* Navigator.xcdatamodeld in Sources */,
 				AA272A1B292F8F71009439D5 /* AppDelegate.swift in Sources */,
 				AA821BF929338D020033ED03 /* ProViewController.swift in Sources */,
+				AA882A8B29389E4A009FAC93 /* ProfilViewController.swift in Sources */,
 				AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */,
 				AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */,
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
+				AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

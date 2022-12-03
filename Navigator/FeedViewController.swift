@@ -13,7 +13,8 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         self.view.addSubview(button)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(toInfoController))
-        self.view.backgroundColor = .magenta
+        self.view.backgroundColor = .systemPurple
+        navigationBar()
     }
 
 
@@ -38,6 +39,15 @@ class FeedViewController: UIViewController {
     @objc func toInfoController(){
         let infoVC = InfoViewController()
        self.navigationController?.pushViewController(infoVC, animated: true)
+    }
+
+
+    func navigationBar(){
+        let navigationBar = UINavigationBarAppearance()
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationBar.backgroundColor = .white
+        navigationItem.scrollEdgeAppearance = navigationBar
+        title = "Feed"
     }
 
 

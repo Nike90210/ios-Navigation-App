@@ -14,21 +14,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createFirstViewController () -> UINavigationController{
         let vc = UINavigationController(rootViewController: FeedViewController())
-        vc.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "sun.min"), tag: 0)
+        vc.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "house.fill"), tag: 0)
         return vc
 
     }
 
     func createSecondViewController () -> UINavigationController{
-        let vc = UINavigationController(rootViewController: ProViewController())
-        vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "sunset"), tag: 1)
+        let vc = UINavigationController(rootViewController: ProfilViewController())
+        vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.fill"), tag: 1)
         return vc
 
     }
 
     func creatTabBar() -> UITabBarController{
         let tb = UITabBarController()
-        tb.tabBar.backgroundColor = .cyan
+        tb.tabBar.backgroundColor = .white
         tb.viewControllers = [createFirstViewController(), createSecondViewController()]
 
         return tb
