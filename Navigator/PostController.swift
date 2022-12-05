@@ -15,10 +15,8 @@ class PostController: UIViewController {
         navigationController?.viewControllers.forEach{ vc in print(vc.self)}
 
     }
-    
 
 }
-
 
 struct Post {
 

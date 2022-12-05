@@ -6,8 +6,6 @@ class FeedViewController: UIViewController {
 
     let post = Post(title: "New Photo")
 
-
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -49,7 +47,6 @@ class FeedViewController: UIViewController {
         navigationItem.scrollEdgeAppearance = navigationBar
         title = "Feed"
     }
-
 
 }
 

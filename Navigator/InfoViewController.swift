@@ -14,9 +14,7 @@ class InfoViewController: UIViewController {
         self.view.addSubview(button)
         self.view.backgroundColor = .darkGray
 
-
     }
-    
 
     var button : UIButton{
         let button = UIButton(frame: CGRect(x: 165, y: 400, width: 100,height: 40))

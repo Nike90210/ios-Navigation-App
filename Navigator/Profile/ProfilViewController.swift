@@ -15,10 +15,8 @@ class ProfilViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .lightGray
-        self.view.addSubview(profileHeader.imageForProfile)
+        self.view.addSubview(profileHeader)
         self.view.addSubview(profileHeader.button)
-        self.view.addSubview(profileHeader.label)
-        self.view.addSubview(profileHeader.labelStatus)
         navigationBar()
 
     }

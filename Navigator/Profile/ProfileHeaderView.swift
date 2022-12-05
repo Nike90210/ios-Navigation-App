@@ -9,18 +9,9 @@ import UIKit
 
 class ProfileHeaderView: UIView {
 
-    init() {
-        super.init(frame: CGRect())
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-
     var imageForProfile: UIView = {
 
-        let imageView = UIView(frame: CGRect(x: 30, y: 150, width: 130, height: 130))
+        let imageView = UIView(frame: CGRect(x: 30, y: 120, width: 130, height: 130))
         imageView.layer.cornerRadius = imageView.frame.width / 2
         imageView.clipsToBounds = true
         imageView.layer.borderColor = UIColor.white.cgColor
@@ -37,7 +28,7 @@ class ProfileHeaderView: UIView {
 
     var label: UILabel{
 
-        let label = UILabel(frame: CGRect(x: 180, y: 240, width: 180, height: 40))
+        let label = UILabel(frame: CGRect(x: 180, y: 190, width: 180, height: 40))
         label.text = "New Features"
         label.textColor = .systemGray
         label.font = UIFont(name: "Regular", size: 14)
@@ -48,7 +39,7 @@ class ProfileHeaderView: UIView {
 
     var labelStatus: UILabel{
 
-        let label = UILabel(frame: CGRect(x: 180, y: 150, width: 180, height: 40))
+        let label = UILabel(frame: CGRect(x: 180, y: 120, width: 180, height: 40))
         label.text = "it's about time"
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 18)
@@ -59,7 +50,7 @@ class ProfileHeaderView: UIView {
 
     var button: UIButton{
 
-        let button = UIButton(frame: CGRect(x: 30, y: 300, width: 330, height: 50))
+        let button = UIButton(frame: CGRect(x: 30, y: 260, width: 330, height: 50))
         button.setTitle("show status", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = .blue
@@ -74,11 +65,28 @@ class ProfileHeaderView: UIView {
         return button
     }
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        subViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+
+    private func subViews(){
+        addSubview(button)
+        addSubview(labelStatus)
+        addSubview(label)
+        addSubview(imageForProfile)
+    }
+
     @objc func showStatus(){
 
         print(label.text ?? "")
 
     }
-
 
 }
