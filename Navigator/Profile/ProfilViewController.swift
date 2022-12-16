@@ -13,12 +13,10 @@ class ProfilViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = .lightGray
-        self.view.addSubview(profileHeader)
-        self.view.addSubview(profileHeader.button)
+        profileHeader.setConstrains()
+        //  self.view.addSubview(profileHeader.button)
         navigationBar()
-
     }
 
     func navigationBar(){
@@ -32,7 +30,9 @@ class ProfilViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-       
+
     }
 
 }
+
+
