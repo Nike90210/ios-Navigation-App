@@ -19,6 +19,7 @@
 		AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */; };
 		AA882A8B29389E4A009FAC93 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */; };
 		AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4A9132936036700AA7AB1 /* InfoViewController.swift */; };
+		AACFE0B9294CD4C4003ED526 /* ProfileheaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		AAC4A9132936036700AA7AB1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileheaderView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
+				AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */,
 				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
 			);
 			path = Profile;
@@ -172,6 +175,7 @@
 				AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */,
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
+				AACFE0B9294CD4C4003ED526 /* ProfileheaderView2.swift in Sources */,
 				AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
