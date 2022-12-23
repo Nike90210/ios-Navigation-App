@@ -18,6 +18,8 @@
 		AA821BF929338D020033ED03 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF829338D020033ED03 /* ProViewController.swift */; };
 		AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */; };
 		AA882A8B29389E4A009FAC93 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */; };
+		AAAF64EB295098E500495341 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF64EA295098E500495341 /* PostViewController.swift */; };
+		AAAF64ED29509C5100495341 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF64EC29509C5100495341 /* LogInViewController.swift */; };
 		AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4A9132936036700AA7AB1 /* InfoViewController.swift */; };
 		AACFE0B9294CD4C4003ED526 /* ProfileheaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		AA821BF829338D020033ED03 /* ProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
 		AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		AAAF64EA295098E500495341 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		AAAF64EC29509C5100495341 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AAC4A9132936036700AA7AB1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileheaderView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,7 @@
 				AA272A1C292F8F71009439D5 /* SceneDelegate.swift */,
 				AA821BF429338B780033ED03 /* FeedViewController.swift */,
 				AA821BF2293386A30033ED03 /* PostController.swift */,
+				AAAF64EA295098E500495341 /* PostViewController.swift */,
 				AAC4A9132936036700AA7AB1 /* InfoViewController.swift */,
 				AA821BF829338D020033ED03 /* ProViewController.swift */,
 				AA882A8329389BB2009FAC93 /* Profile */,
@@ -92,6 +97,7 @@
 				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
 				AACFE0B8294CD4C4003ED526 /* ProfileheaderView2.swift */,
 				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
+				AAAF64EC29509C5100495341 /* LogInViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -175,8 +181,10 @@
 				AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */,
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
+				AAAF64ED29509C5100495341 /* LogInViewController.swift in Sources */,
 				AACFE0B9294CD4C4003ED526 /* ProfileheaderView2.swift in Sources */,
 				AA882A8529389BE4009FAC93 /* ProfileHeaderView.swift in Sources */,
+				AAAF64EB295098E500495341 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
