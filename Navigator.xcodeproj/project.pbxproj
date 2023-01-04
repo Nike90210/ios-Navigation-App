@@ -13,6 +13,9 @@
 		AA272A25292F8F71009439D5 /* Navigator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA272A23292F8F71009439D5 /* Navigator.xcdatamodeld */; };
 		AA272A27292F8F73009439D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA272A26292F8F73009439D5 /* Assets.xcassets */; };
 		AA272A2A292F8F73009439D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */; };
+		AA31554E296407BA0001284B /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31554D296407BA0001284B /* PhotoTableViewCell.swift */; };
+		AA31555029644AB60001284B /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31554F29644AB60001284B /* PhotosViewController.swift */; };
+		AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */; };
 		AA4EF69E293B55C800FCC37E /* Dragon Expansion.png in Resources */ = {isa = PBXBuildFile; fileRef = AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */; };
 		AA821BF3293386A30033ED03 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF2293386A30033ED03 /* PostController.swift */; };
 		AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF429338B780033ED03 /* FeedViewController.swift */; };
@@ -34,6 +37,9 @@
 		AA272A26292F8F73009439D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA272A29292F8F73009439D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA272A2B292F8F73009439D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA31554D296407BA0001284B /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		AA31554F29644AB60001284B /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon Expansion.png"; sourceTree = "<group>"; };
 		AA821BF2293386A30033ED03 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		AA821BF429338B780033ED03 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +105,11 @@
 				AAED1399295873D000522885 /* Model */,
 				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
 				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
-				AA22B15C295ACC1400CA9B01 /* TableViewCell.swift */,
 				AAAF64EC29509C5100495341 /* LogInViewController.swift */,
+				AA22B15C295ACC1400CA9B01 /* TableViewCell.swift */,
+				AA31554D296407BA0001284B /* PhotoTableViewCell.swift */,
+				AA31554F29644AB60001284B /* PhotosViewController.swift */,
+				AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA31554E296407BA0001284B /* PhotoTableViewCell.swift in Sources */,
 				AA22B15D295ACC1400CA9B01 /* TableViewCell.swift in Sources */,
 				AA272A25292F8F71009439D5 /* Navigator.xcdatamodeld in Sources */,
 				AA272A1B292F8F71009439D5 /* AppDelegate.swift in Sources */,
@@ -192,6 +202,8 @@
 				AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */,
 				AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */,
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
+				AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */,
+				AA31555029644AB60001284B /* PhotosViewController.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
 				AAAF64ED29509C5100495341 /* LogInViewController.swift in Sources */,
 				AAED139B295873F800522885 /* PostModelViewController.swift in Sources */,

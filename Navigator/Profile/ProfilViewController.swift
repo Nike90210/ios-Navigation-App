@@ -10,10 +10,11 @@ import UIKit
 class ProfilViewController: UIViewController {
 
 
+    let navigationBar = UINavigationBar()
 
 
     // Создание таблицы и массива с типом данных структуры с данными
-    var tableView = UITableView()
+    var tableView = UITableView(frame: .zero, style: .grouped)
     var headrView: UIView = ProfileHeaderView()
     var dataSourses: [PostModel] = []
 
@@ -29,6 +30,7 @@ class ProfilViewController: UIViewController {
         setConstrains()
         dataSourses = dataSourceFromModel()
         navigationController?.navigationBar.backgroundColor = .white
+        navigationBar.isHidden  = true
 
     }
 
@@ -39,6 +41,7 @@ class ProfilViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: Cells.TableViewCell)
         tableView.register(ProfileHeaderView.self, forHeaderFooterViewReuseIdentifier: ProfileHeaderView.idForHeader)
+        tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: PhotoTableViewCell.cellID)
     }
 
     // создание констрейнтов для таблицы на экране
@@ -57,22 +60,43 @@ class ProfilViewController: UIViewController {
 extension ProfilViewController: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileHeaderView.idForHeader)
+        guard section == 0 else { return nil }
+        return ProfileHeaderView()
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSourses.count
+        if section == 0 {
+            return 1
+        }else{
+            return dataSourses.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.TableViewCell) as! TableViewCell
-        let images = dataSourses[indexPath.row]
-        cell.set(post: images)
-
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PhotoTableViewCell.cellID, for: indexPath)
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cells.TableViewCell) as! TableViewCell
+            let images = dataSourses[indexPath.row]
+            cell.set(post: images)
+            return cell
+        }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 0 {
+            let vc = PhotosViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+
+    }
 
 
 
@@ -87,7 +111,7 @@ extension ProfilViewController{
                               image: UIImage(named: "ciberPunk")!,
                               likes: "Likes: 11",
                               views: "Views: 24")
-        var post2 = PostModel(autor: "NationalGeographics",
+        var post2 = PostModel(autor: "NationalGeographic",
                               description: "winter forest in North America",
                               image: UIImage(named: "winterHouse")!,
                               likes: "Likes: 12",
@@ -97,7 +121,7 @@ extension ProfilViewController{
                               image:UIImage(named: "Eve")!,
                               likes: "Likes: 122",
                               views: "Views: 1241")
-        var post4 = PostModel(autor: "National Geograpgics",
+        var post4 = PostModel(autor: "NationalGeographic",
                               description: "We found this admirable raod withing a red forest on the outskirt of  the Easten Ireland",
                               image: UIImage(named: "dorogaRed")!,
                               likes: "Likes: 938",
@@ -111,6 +135,7 @@ extension ProfilViewController{
 
 
 
+    //MARK: - Old code for reference
 
     //    var dataSourceFromModel: [PostModel]{
     //        let models = [
@@ -140,7 +165,6 @@ extension ProfilViewController{
 }
 
 
-// Old code for reference
 
 
 

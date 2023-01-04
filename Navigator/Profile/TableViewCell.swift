@@ -55,6 +55,7 @@ class TableViewCell: UITableViewCell {
     // настройка для Лэйблов
     func setLabelsConfiguration(){
         autor.numberOfLines = 0
+        autor.font = UIFont.boldSystemFont(ofSize: 20)
         autor.adjustsFontSizeToFitWidth = true
 
         labelDescription.numberOfLines = 0
@@ -70,9 +71,7 @@ class TableViewCell: UITableViewCell {
 
 // создание констрейнтов
     func setConstraintsConfiguration(){
-
-
-
+        
         autor.translatesAutoresizingMaskIntoConstraints = false
         uiImage.translatesAutoresizingMaskIntoConstraints = false
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +79,6 @@ class TableViewCell: UITableViewCell {
         views.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-
 
             autor.topAnchor.constraint(equalTo: topAnchor,constant: 16),
             autor.leadingAnchor.constraint(equalTo: leadingAnchor),
