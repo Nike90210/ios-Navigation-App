@@ -9,15 +9,12 @@ import UIKit
 
 class ProfilViewController: UIViewController {
 
-
     let navigationBar = UINavigationBar()
-
 
     // Создание таблицы и массива с типом данных структуры с данными
     var tableView = UITableView(frame: .zero, style: .grouped)
     var headrView: UIView = ProfileHeaderView()
     var dataSourses: [PostModel] = []
-
 
     // Идентификатор для метода cellForRowAt dequeueReusableCell
     struct Cells {
@@ -31,7 +28,6 @@ class ProfilViewController: UIViewController {
         dataSourses = dataSourceFromModel()
         navigationController?.navigationBar.backgroundColor = .white
         navigationBar.isHidden  = true
-
     }
 
     // привязка делегата и dataSource к таблице и регистрация кастомной ячейки с идентификатором
@@ -97,31 +93,28 @@ extension ProfilViewController: UITableViewDelegate, UITableViewDataSource{
         }
 
     }
-
-
-
 }
 
 // задаем данные для отображение из созданной отдельно структуры
 extension ProfilViewController{
 
     func dataSourceFromModel() -> [PostModel]{
-        var post1 = PostModel(autor: "CDProject",
+        let post1 = PostModel(autor: "CDProject",
                               description: "a bad game",
                               image: UIImage(named: "ciberPunk")!,
                               likes: "Likes: 11",
                               views: "Views: 24")
-        var post2 = PostModel(autor: "NationalGeographic",
+        let post2 = PostModel(autor: "NationalGeographic",
                               description: "winter forest in North America",
                               image: UIImage(named: "winterHouse")!,
                               likes: "Likes: 12",
                               views: "Views: 124")
-        var post3 = PostModel(autor: "CCP Games",
+        let post3 = PostModel(autor: "CCP Games",
                               description: "Explore a deeper sapce with new ships",
                               image:UIImage(named: "Eve")!,
                               likes: "Likes: 122",
                               views: "Views: 1241")
-        var post4 = PostModel(autor: "NationalGeographic",
+        let post4 = PostModel(autor: "NationalGeographic",
                               description: "We found this admirable raod withing a red forest on the outskirt of  the Easten Ireland",
                               image: UIImage(named: "dorogaRed")!,
                               likes: "Likes: 938",
@@ -129,12 +122,7 @@ extension ProfilViewController{
 
         return [post1, post2, post3, post4]
     }
-
-
-
-
-
-
+    
     //MARK: - Old code for reference
 
     //    var dataSourceFromModel: [PostModel]{
