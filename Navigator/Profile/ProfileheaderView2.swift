@@ -17,9 +17,9 @@ class ProfileheaderView2: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
 
-extension ProfileheaderView2{
+
+
 
     func subViews (){
         let safeArea = safeAreaLayoutGuide
@@ -50,7 +50,10 @@ extension ProfileheaderView2{
 
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("show status", for: .normal)
+        button.setTitle("Show status", for: .normal)
+        button.addAction(UIAction{_ in
+           print( statusLabel.text ?? "" )
+        }, for: .touchUpInside)
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = .blue
         button.layer.cornerRadius = 4
@@ -59,6 +62,7 @@ extension ProfileheaderView2{
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.7
+
 
         let statusTexField = UITextField()
         statusTexField.translatesAutoresizingMaskIntoConstraints = false
@@ -88,8 +92,8 @@ extension ProfileheaderView2{
             statusTexField.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
 
             button.topAnchor.constraint(equalTo: statusTexField.bottomAnchor, constant: 16),
-            button.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20),
-            button.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -40),
+            button.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            button.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
             button.heightAnchor.constraint(equalToConstant: 50),
 
             imageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
@@ -99,4 +103,6 @@ extension ProfileheaderView2{
 
         ])
     }
+
 }
+

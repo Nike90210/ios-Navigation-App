@@ -18,8 +18,4 @@ class PostController: UIViewController {
 
 }
 
-struct Post {
 
-var title: String
-    
-}
