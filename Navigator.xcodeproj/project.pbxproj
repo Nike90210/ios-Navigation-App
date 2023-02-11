@@ -15,8 +15,10 @@
 		AA272A2A292F8F73009439D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */; };
 		AA31554E296407BA0001284B /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31554D296407BA0001284B /* PhotoTableViewCell.swift */; };
 		AA31555029644AB60001284B /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31554F29644AB60001284B /* PhotosViewController.swift */; };
+		AA489FA5298D2D7C00ED58EB /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA489FA4298D2D7C00ED58EB /* Authorization.swift */; };
 		AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */; };
 		AA4EF69E293B55C800FCC37E /* Dragon Expansion.png in Resources */ = {isa = PBXBuildFile; fileRef = AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */; };
+		AA783DE8299269BE00E55390 /* FullDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA783DE7299269BE00E55390 /* FullDetailViewController.swift */; };
 		AA821BF3293386A30033ED03 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF2293386A30033ED03 /* PostController.swift */; };
 		AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF429338B780033ED03 /* FeedViewController.swift */; };
 		AA821BF929338D020033ED03 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF829338D020033ED03 /* ProViewController.swift */; };
@@ -39,8 +41,10 @@
 		AA272A2B292F8F73009439D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA31554D296407BA0001284B /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		AA31554F29644AB60001284B /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		AA489FA4298D2D7C00ED58EB /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon Expansion.png"; sourceTree = "<group>"; };
+		AA783DE7299269BE00E55390 /* FullDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDetailViewController.swift; sourceTree = "<group>"; };
 		AA821BF2293386A30033ED03 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		AA821BF429338B780033ED03 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AA821BF829338D020033ED03 /* ProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
@@ -82,34 +86,75 @@
 		AA272A19292F8F71009439D5 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
-				AA272A1A292F8F71009439D5 /* AppDelegate.swift */,
-				AA272A1C292F8F71009439D5 /* SceneDelegate.swift */,
-				AA821BF429338B780033ED03 /* FeedViewController.swift */,
-				AA821BF2293386A30033ED03 /* PostController.swift */,
-				AAAF64EA295098E500495341 /* PostViewController.swift */,
-				AAC4A9132936036700AA7AB1 /* InfoViewController.swift */,
-				AA821BF829338D020033ED03 /* ProViewController.swift */,
-				AA882A8329389BB2009FAC93 /* Profile */,
-				AA272A26292F8F73009439D5 /* Assets.xcassets */,
-				AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */,
-				AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */,
-				AA272A2B292F8F73009439D5 /* Info.plist */,
 				AA272A23292F8F71009439D5 /* Navigator.xcdatamodeld */,
+				AA882A8329389BB2009FAC93 /* Profile */,
+				AA5E7F10298A9A9500F9060A /* Supplements */,
+				AA5E7F13298A9B2600F9060A /* Model */,
+				AA5E7F12298A9AFC00F9060A /* Controllers */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		AA5E7F10298A9A9500F9060A /* Supplements */ = {
+			isa = PBXGroup;
+			children = (
+				AA272A2B292F8F73009439D5 /* Info.plist */,
+				AA272A28292F8F73009439D5 /* LaunchScreen.storyboard */,
+				AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */,
+				AA272A26292F8F73009439D5 /* Assets.xcassets */,
+			);
+			path = Supplements;
+			sourceTree = "<group>";
+		};
+		AA5E7F12298A9AFC00F9060A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA272A1A292F8F71009439D5 /* AppDelegate.swift */,
+				AA272A1C292F8F71009439D5 /* SceneDelegate.swift */,
+				AA821BF829338D020033ED03 /* ProViewController.swift */,
+				AAC4A9132936036700AA7AB1 /* InfoViewController.swift */,
+				AA821BF2293386A30033ED03 /* PostController.swift */,
+				AA821BF429338B780033ED03 /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AA5E7F13298A9B2600F9060A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAAF64EA295098E500495341 /* PostViewController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA5E7F14298A9B4900F9060A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */,
+				AA31554D296407BA0001284B /* PhotoTableViewCell.swift */,
+				AA22B15C295ACC1400CA9B01 /* TableViewCell.swift */,
+				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA5E7F15298A9B6E00F9060A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
+				AAAF64EC29509C5100495341 /* LogInViewController.swift */,
+				AA31554F29644AB60001284B /* PhotosViewController.swift */,
+				AA783DE7299269BE00E55390 /* FullDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AA882A8329389BB2009FAC93 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AA5E7F15298A9B6E00F9060A /* Controllers */,
+				AA5E7F14298A9B4900F9060A /* View */,
 				AAED1399295873D000522885 /* Model */,
-				AA882A8429389BE4009FAC93 /* ProfileHeaderView.swift */,
-				AA882A8A29389E4A009FAC93 /* ProfilViewController.swift */,
-				AAAF64EC29509C5100495341 /* LogInViewController.swift */,
-				AA22B15C295ACC1400CA9B01 /* TableViewCell.swift */,
-				AA31554D296407BA0001284B /* PhotoTableViewCell.swift */,
-				AA31554F29644AB60001284B /* PhotosViewController.swift */,
-				AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -118,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AAED139A295873F800522885 /* PostModelViewController.swift */,
+				AA489FA4298D2D7C00ED58EB /* Authorization.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,9 +247,11 @@
 				AA882A8B29389E4A009FAC93 /* ProfilViewController.swift in Sources */,
 				AAC4A9142936036700AA7AB1 /* InfoViewController.swift in Sources */,
 				AA821BF529338B780033ED03 /* FeedViewController.swift in Sources */,
+				AA489FA5298D2D7C00ED58EB /* Authorization.swift in Sources */,
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
 				AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */,
 				AA31555029644AB60001284B /* PhotosViewController.swift in Sources */,
+				AA783DE8299269BE00E55390 /* FullDetailViewController.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
 				AAAF64ED29509C5100495341 /* LogInViewController.swift in Sources */,
 				AAED139B295873F800522885 /* PostModelViewController.swift in Sources */,
@@ -349,7 +397,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Navigator/Info.plist;
+				INFOPLIST_FILE = /Applications/Xcode/Navigator/Navigator/Supplements/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -376,7 +424,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Navigator/Info.plist;
+				INFOPLIST_FILE = /Applications/Xcode/Navigator/Navigator/Supplements/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				"INFOPLIST_KEY_UIMainStoryboardFile[sdk=*]" = "";
