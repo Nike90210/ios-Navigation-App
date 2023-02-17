@@ -141,10 +141,10 @@ extension ProfileHeaderView {
     func setConstrains(){
         NSLayoutConstraint.activate([
             fullNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 50),
-            fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 130 + 16 + 16),
+            fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 162),
 
             statusLabel.topAnchor.constraint(equalTo: fullNameLabel.bottomAnchor, constant: 40),
-            statusLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 16 + 130 + 16),
+            statusLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 162),
 
             statusTexField.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 10),
             statusTextLeading,

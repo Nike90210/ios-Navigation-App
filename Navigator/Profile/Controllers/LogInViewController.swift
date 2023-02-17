@@ -4,31 +4,23 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
-    var loginTextFieldConstraintsLeading: NSLayoutConstraint!
-    var loginTextFieldConstrainstTrailing: NSLayoutConstraint!
-    var passwordTextFieldConstraintsLeading: NSLayoutConstraint!
-    var paswordTextFieldConstrainstTrailing: NSLayoutConstraint!
+    var stackTextFieldLeadingAnchor: NSLayoutConstraint!
+
+    var stackTextFieldTrailingAnchor: NSLayoutConstraint!
 
     lazy var loginTextField: UITextField = {
         let logingTextField = UITextField(frame: .zero)
         logingTextField.placeholder = "Email or phone"
-
+        logingTextField.isSecureTextEntry = false
         standartSettingsForTextFields(textFields: logingTextField)
-
-        loginTextFieldConstraintsLeading = logingTextField.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16)
-        loginTextFieldConstrainstTrailing = logingTextField.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         return logingTextField
     }()
 
     lazy var  passwordTextField: UITextField = {
         let passwordTextField = UITextField(frame: .zero)
         passwordTextField.placeholder = "Password"
-        passwordTextField.tintColor = UIColor(named: "MyColor")
-        passwordTextField.layer.borderWidth = 0.5
+        passwordTextField.isSecureTextEntry = true
         standartSettingsForTextFields(textFields: passwordTextField)
-        passwordTextFieldConstraintsLeading = passwordTextField.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16)
-        paswordTextFieldConstrainstTrailing = passwordTextField.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         return passwordTextField
     }()
 
@@ -54,6 +46,18 @@ class LogInViewController: UIViewController {
         return logingB
     }()
 
+    lazy var stackTextField: UIStackView = {
+        let stackTextField = UIStackView()
+        stackTextField.axis = .vertical
+        stackTextField.distribution = .fillEqually
+        stackTextField.spacing = 0
+        stackTextField.addArrangedSubview(loginTextField)
+        stackTextField.addArrangedSubview(passwordTextField)
+        stackTextFieldLeadingAnchor = stackTextField.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16)
+        stackTextFieldTrailingAnchor = stackTextField.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+        return stackTextField
+    }()
+
     lazy var scrollView: UIScrollView = {
         let scrollView  = UIScrollView()
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 900)
@@ -69,7 +73,7 @@ class LogInViewController: UIViewController {
         return loginImage
     }()
 
-    lazy var errorPasswordNotification: UILabel = {
+    lazy var errorNotifications: UILabel = {
         let errorPasswordNotification = UILabel()
         errorPasswordNotification.text = "Incorrect password"
         errorPasswordNotification.font = UIFont(name: "regular", size: 9)
@@ -109,24 +113,23 @@ class LogInViewController: UIViewController {
         }catch PossibleErrors.linesIsEmpty{
             textfieldIsEmpty(textField: loginTextField)
             textfieldIsEmpty(textField: passwordTextField)
-            textFieldLoginErrorAnimation()
-            textFieldPasswordErrorAnimation()
+            errorEarthquake()
             return false
         }catch PossibleErrors.loginIsEmpty{
             textfieldIsEmpty(textField: loginTextField)
-            textFieldLoginErrorAnimation()
+            errorEarthquake()
             return false
         }catch PossibleErrors.passwordIsEmpty{
             textfieldIsEmpty(textField: passwordTextField)
-            textFieldPasswordErrorAnimation()
+            errorEarthquake()
             return false
         }catch PossibleErrors.incorrectPaswword{
             UIView.animate(withDuration: 0.5, delay: 0.2, animations: {
                 self.textfieldIsEmpty(textField: self.passwordTextField)
             }){_ in
-                self.errorPasswordNotification.isHidden = false
+                self.errorNotifications.isHidden = false
             }
-            textFieldPasswordErrorAnimation()
+            errorEarthquake()
             return false
         }catch PossibleErrors.incorrectLogin{
             let alertController = UIAlertController(title: "Sorry", message: "Login is incorrect", preferredStyle: .alert)
@@ -147,29 +150,16 @@ class LogInViewController: UIViewController {
         return true
     }
 
-    func textFieldLoginErrorAnimation(){
-        UIView.animate(withDuration: 0.1, delay: 00, animations: {
-            UIView.modifyAnimations(withRepeatCount: 5, autoreverses: true) {
-                self.loginTextFieldConstraintsLeading.constant = 10
-                self.loginTextFieldConstrainstTrailing.constant = -10
+    private func errorEarthquake() {
+        UIView.animate(withDuration: 0.05,  animations: {
+            UIView.modifyAnimations(withRepeatCount: 6, autoreverses: true) {
+                self.stackTextFieldLeadingAnchor.constant = 11
+                self.stackTextFieldTrailingAnchor.constant = -21
                 self.view.layoutIfNeeded()
             }
         }) {_ in
-            self.loginTextFieldConstraintsLeading.constant = 16
-            self.loginTextFieldConstrainstTrailing.constant = -16
-        }
-    }
-
-    func textFieldPasswordErrorAnimation(){
-        UIView.animate(withDuration: 0.1, delay: 00, animations: {
-            UIView.modifyAnimations(withRepeatCount: 5, autoreverses: true) {
-                self.passwordTextFieldConstraintsLeading.constant = 10
-                self.paswordTextFieldConstrainstTrailing.constant = -10
-                self.view.layoutIfNeeded()
-            }
-        }) {_ in
-            self.passwordTextFieldConstraintsLeading.constant = 16
-            self.paswordTextFieldConstrainstTrailing.constant = -16
+            self.stackTextFieldLeadingAnchor.constant = 16
+            self.stackTextFieldTrailingAnchor.constant = -16
         }
     }
 
@@ -177,7 +167,7 @@ class LogInViewController: UIViewController {
         UIView.animate(withDuration: 0, delay: 0, animations: {
             self.standartSettingsForTextFields(textFields: self.loginTextField)
             self.standartSettingsForTextFields(textFields: self.passwordTextField)
-            self.errorPasswordNotification.isHidden = true
+            self.errorNotifications.isHidden = true
         })
     }
 
@@ -209,12 +199,14 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(scrollView)
-        scrollView.addSubview(loginImage)
-        scrollView.addSubview(loginTextField)
-        scrollView.addSubview(loginButton)
-        scrollView.addSubview(passwordTextField)
-        scrollView.addSubview(errorPasswordNotification)
+        scrollView.addMultipalSubviews(viewArray: [
+            loginImage,
+            stackTextField,
+            errorNotifications,
+            loginButton
+        ])
         subscribeKeaboardEvent()
+        scrollView.keyboardDismissMode = .interactive
         layoutElements()
     }
 
@@ -244,34 +236,25 @@ extension LogInViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-
             loginImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 120),
             loginImage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             loginImage.heightAnchor.constraint(equalToConstant: 100),
             loginImage.widthAnchor.constraint(equalToConstant: 100),
-
-            loginTextField.topAnchor.constraint(equalTo: loginImage.bottomAnchor, constant: 120),
-            loginTextFieldConstraintsLeading,
-            loginTextFieldConstrainstTrailing,
-            loginTextField.heightAnchor.constraint(equalToConstant: 50),
-
-            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 0),
-            passwordTextFieldConstraintsLeading,
-            paswordTextFieldConstrainstTrailing,
-            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
-
-            errorPasswordNotification.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
-            errorPasswordNotification.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -110),
-
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            stackTextField.topAnchor.constraint(equalTo: loginImage.bottomAnchor, constant: 120),
+            stackTextFieldLeadingAnchor,
+            stackTextFieldTrailingAnchor,
+            stackTextField.heightAnchor.constraint(equalToConstant: 100),
+            errorNotifications.topAnchor.constraint(equalTo: stackTextField.bottomAnchor, constant: 2),
+            errorNotifications.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            loginButton.topAnchor.constraint(equalTo: stackTextField.bottomAnchor, constant: 24),
             loginButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            loginButton.trailingAnchor.constraint(equalTo:scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            loginButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
-extension UIImage{
 
+extension UIImage{
     func drawImage(alpha: CGFloat) -> UIImage?{
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         draw(at: .zero, blendMode: .normal, alpha: alpha)

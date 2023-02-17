@@ -17,6 +17,7 @@
 		AA31555029644AB60001284B /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31554F29644AB60001284B /* PhotosViewController.swift */; };
 		AA489FA5298D2D7C00ED58EB /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA489FA4298D2D7C00ED58EB /* Authorization.swift */; };
 		AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */; };
+		AA4997EB299F61840069714C /* FunctionAddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4997EA299F61840069714C /* FunctionAddSubviews.swift */; };
 		AA4EF69E293B55C800FCC37E /* Dragon Expansion.png in Resources */ = {isa = PBXBuildFile; fileRef = AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */; };
 		AA783DE8299269BE00E55390 /* FullDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA783DE7299269BE00E55390 /* FullDetailViewController.swift */; };
 		AA821BF3293386A30033ED03 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA821BF2293386A30033ED03 /* PostController.swift */; };
@@ -43,6 +44,7 @@
 		AA31554F29644AB60001284B /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		AA489FA4298D2D7C00ED58EB /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		AA49443D2965B62600980B34 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA4997EA299F61840069714C /* FunctionAddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionAddSubviews.swift; sourceTree = "<group>"; };
 		AA4EF69D293B55C800FCC37E /* Dragon Expansion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dragon Expansion.png"; sourceTree = "<group>"; };
 		AA783DE7299269BE00E55390 /* FullDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDetailViewController.swift; sourceTree = "<group>"; };
 		AA821BF2293386A30033ED03 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				AAED139A295873F800522885 /* PostModelViewController.swift */,
 				AA489FA4298D2D7C00ED58EB /* Authorization.swift */,
+				AA4997EA299F61840069714C /* FunctionAddSubviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				AA272A1D292F8F71009439D5 /* SceneDelegate.swift in Sources */,
 				AA49443E2965B62600980B34 /* PhotoCollectionViewCell.swift in Sources */,
 				AA31555029644AB60001284B /* PhotosViewController.swift in Sources */,
+				AA4997EB299F61840069714C /* FunctionAddSubviews.swift in Sources */,
 				AA783DE8299269BE00E55390 /* FullDetailViewController.swift in Sources */,
 				AA821BF3293386A30033ED03 /* PostController.swift in Sources */,
 				AAAF64ED29509C5100495341 /* LogInViewController.swift in Sources */,
