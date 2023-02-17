@@ -11,6 +11,7 @@ class LogInViewController: UIViewController {
     lazy var loginTextField: UITextField = {
         let logingTextField = UITextField(frame: .zero)
         logingTextField.placeholder = "Email or phone"
+        logingTextField.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         logingTextField.isSecureTextEntry = false
         standartSettingsForTextFields(textFields: logingTextField)
         return logingTextField
@@ -20,6 +21,7 @@ class LogInViewController: UIViewController {
         let passwordTextField = UITextField(frame: .zero)
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         standartSettingsForTextFields(textFields: passwordTextField)
         return passwordTextField
     }()
@@ -86,8 +88,8 @@ class LogInViewController: UIViewController {
     func standartSettingsForTextFields(textFields: UITextField) {
         textFields.backgroundColor = .systemGray6
         textFields.tintColor = UIColor(named: "MyColor")
-        textFields.layer.cornerRadius = 10
         textFields.layer.borderWidth = 0.5
+        textFields.layer.cornerRadius = 10
         textFields.font = UIFont.systemFont(ofSize: 16)
         textFields.textColor = .black
         textFields.layer.borderColor = UIColor.lightGray.cgColor
@@ -236,16 +238,20 @@ extension LogInViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+
             loginImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 120),
             loginImage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             loginImage.heightAnchor.constraint(equalToConstant: 100),
             loginImage.widthAnchor.constraint(equalToConstant: 100),
+
             stackTextField.topAnchor.constraint(equalTo: loginImage.bottomAnchor, constant: 120),
             stackTextFieldLeadingAnchor,
             stackTextFieldTrailingAnchor,
             stackTextField.heightAnchor.constraint(equalToConstant: 100),
+
             errorNotifications.topAnchor.constraint(equalTo: stackTextField.bottomAnchor, constant: 2),
             errorNotifications.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+
             loginButton.topAnchor.constraint(equalTo: stackTextField.bottomAnchor, constant: 24),
             loginButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             loginButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),

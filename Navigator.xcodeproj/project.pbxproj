@@ -401,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Applications/Xcode/Navigator/Navigator/Supplements/info.plist;
+				INFOPLIST_FILE = Navigator/Supplements/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -428,7 +428,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Applications/Xcode/Navigator/Navigator/Supplements/info.plist;
+				INFOPLIST_FILE = Navigator/Supplements/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				"INFOPLIST_KEY_UIMainStoryboardFile[sdk=*]" = "";
